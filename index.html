@@ -2,19 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple PWA</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Что выгоднее купить</title>
+  <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="manifest" href="/manifest.json">
 <body>
-<nav>
-  <h1>VM PWA</h1>
-</nav>
-<header>
-  <h2>Изучаем PWA, manifest, Service Workers</h2>
-</header>
-<div class="container">
-  <div id="posts"></div>
-</div>
+  <header class="header">
+    <div class="header__block container">
+      <div class="header__block_logo">
+        <img src="./icons/icon-96x96.png" alt="Логотип">
+      </div>
+      <hi class="header__block_title">
+        <span>Давайте определимся: </span>Что выгоднее купить?
+      </hi>
+      <div class="header__block_final"></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="section__first">
+        <form id="formScore" name="formScore" action="">
+
+          <h2 class="section__first_title">Первый товар</h2>
+          <div class="input">
+            <label for="#firstPrice">Введите стоимость товара:</label>
+            <input id="firstPrice" name="priceFirst" class="form__price" type="number" placeholder="Стоимость товара" required>
+            
+            <label for="#firstQuantity">Введите количество(объём) товара:</label>
+            <input id="firstQuantity" name="quantityFirst" class="form__price" type="number" placeholder="Количество(объём)" required>
+          </div>
+
+          <h2 class="section__first_title">Второй товар</h2>
+          <div class="input">
+            <label for="#lastPrice">Введите стоимость товара:</label>
+            <input id="lastPrice" name="priceLast" class="form__price" type="number" placeholder="Стоимость товара" required>
+            <label for="#lastQuantity">Введите количество(объём) товара:</label>
+            <input id="lastQuantity" name="quantityLast" class="form__price" type="number" placeholder="Количество(объём)" required>
+          </div>
+          <p class="text">Проверьте правильность ввода данных и нажмите кнопку "Посчитать"</p>
+          <div class="button-group">
+            <button class="button" type="submit">Посчитать</button>
+            <button class="button reset" type="button">Сброс при ошибке</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="section__img"></section>
+
+      <section class="result">
+        <div class="result__modal">
+          <div class="result__modal_info"></div>
+          <button class="button reset" type="button">Сброс данных</button>
+        </div>
+      </section>
+    </div>
+  </main>
 
 <script src="js/app.js"></script>
 </body>

@@ -1,0 +1,156 @@
+input {
+  border-radius: 100px;
+  padding-left: 20px;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header {
+  background-color: rgb(133, 223, 81);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__block_logo img {
+  width: 70px;
+}
+
+.header__block_title {
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.main {
+  background-color: rgb(223, 228, 177);
+  min-height: 100vh;
+}
+
+.section__first_title {
+  padding-top: 10px;
+  margin-bottom: 7px;
+  font-size: 24px;
+}
+
+.form__price {
+  margin-bottom: 5px;
+  height: 55px;
+  color: gray
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input label {
+  font-size: 22px;
+}
+
+.text {
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.button {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 30px 0;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateX(-200%);
+  transition: transform 0.5s ease;
+  z-index: 999;
+}
+
+.result.open {
+  transform: translateX(0%);
+}
+
+.result__modal {
+  margin: 14% auto;
+  position: relative;
+  width: 70%;
+  padding: 50px 10px;
+  background: #2C2C2C;
+  text-align: center;
+}
+
+.result__title {
+  font-size: 20px;
+  color: rgb(252, 14, 14);
+  margin-bottom: 15px;
+}
+
+.result__text {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.section__img {
+  width: 100%;
+  height: 40vh;
+  background-image: url(../icons/1-22.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.noscroll {
+  overflow: hidden;
+  height: 100%;
+}
+
+
+@media (max-width: 565px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header__block_logo img {
+    width: 50px;
+  }
+
+  .header__block_title {
+    font-size: 20px;
+  }
+
+  .section__first_title {
+    font-size: 22px;
+  }
+
+  .section__img {
+    background-size: contain;
+    background-position: top center;
+    height: 60vh;
+  }
+}
